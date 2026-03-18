@@ -1,9 +1,5 @@
 {
   "name": "cmux-pencil-preview",
   "version": "0.1.0",
-  "description": "Pencil design hot reload for cmux browser — auto-export and reload PDF preview after batch_design",
-  "platform": ["darwin"],
-  "dependencies": {
-    "cmux": "https://github.com/manaflow-ai/cmux"
-  }
+  "description": "Pencil design hot reload for cmux browser — auto-export and reload PDF preview after batch_design"
 }
