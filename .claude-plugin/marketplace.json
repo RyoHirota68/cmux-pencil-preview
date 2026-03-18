@@ -6,7 +6,7 @@
   "plugins": [
     {
       "name": "cmux-pencil-preview",
-      "source": ".",
+      "source": "./",
       "description": "Pencil design hot reload for cmux browser — auto-export and reload PDF preview after batch_design"
     }
   ]
