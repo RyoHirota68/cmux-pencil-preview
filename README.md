@@ -19,7 +19,7 @@ Every time Claude Code runs `batch_design` on a `.pen` file, the design is autom
 /plugin install cmux-pencil-preview
 ```
 
-This registers the PostToolUse hook automatically. Then start a preview:
+Restart Claude Code after installing to activate the hook. Then start a preview:
 
 ```
 /pen-preview my-app.pen
