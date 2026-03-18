@@ -22,5 +22,5 @@ done
 [ -z "$SESSIONS" ] && exit 0
 
 cat <<EOF
-{"additionalContext":"[pen-preview] Design changed. Export and reload the file you just edited.\\nActive sessions:${SESSIONS}\\nSteps:\\n1. Find the session matching the file you edited\\n2. Bash: rm -f '<outputDir>'/*.pdf\\n3. export_nodes: filePath, outputDir from matched session, format='pdf', nodeIds=all top-level screen frames\\n4. Bash: cd '<outputDir>' && mv -f \$(ls -t *.pdf | head -1) preview.pdf && cmux browser <surface> reload"}
+{"hookSpecificOutput":{"hookEventName":"PostToolUse","additionalContext":"[pen-preview] Design changed. Export and reload the file you just edited.\\nActive sessions:${SESSIONS}\\nSteps:\\n1. Find the session matching the file you edited\\n2. Bash: rm -f '<outputDir>'/*.pdf\\n3. export_nodes: filePath, outputDir from matched session, format='pdf', nodeIds=all top-level screen frames\\n4. Bash: cd '<outputDir>' && mv -f \$(ls -t *.pdf | head -1) preview.pdf && cmux browser <surface> reload"}}
 EOF
