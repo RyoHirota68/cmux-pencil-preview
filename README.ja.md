@@ -4,6 +4,8 @@
 
 デザインの変更を即座に確認できます。Claude Code で `batch_design` を実行するたびに、PDFプレビューが自動でエクスポート・リロードされます。手動でのエクスポートやリフレッシュは不要です。
 
+![Demo](assets/pen-preview-reload.gif)
+
 [English](README.md)
 
 ## 必要なもの
@@ -25,6 +27,8 @@
 /pen-preview my-app.pen
 ```
 
+![プレビュー開始](assets/pen-preview-start.gif)
+
 ## 仕組み
 
 ```
@@ -45,6 +49,10 @@ batch_design → PostToolUse hook 発火
 ```
 /pen-preview landing-page.pen
 ```
+
+全画面ではなく、特定の画面だけを指定してプレビューすることもできます:
+
+![特定画面のプレビュー](assets/pen-preview-single-screen.gif)
 
 プレビュー中のファイルを確認:
 ```

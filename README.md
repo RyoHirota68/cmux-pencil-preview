@@ -4,6 +4,8 @@ Hot reload for [Pencil](https://www.pencil.dev/) designs in [cmux](https://githu
 
 See your design changes instantly — every time Claude Code runs `batch_design`, the PDF preview is automatically exported and reloaded in the cmux browser pane. No manual export or refresh needed.
 
+![Demo](assets/pen-preview-reload.gif)
+
 [日本語ドキュメント](README.ja.md)
 
 ## Requirements
@@ -25,6 +27,8 @@ Restart Claude Code after installing to activate the hook. Then start a preview:
 /pen-preview my-app.pen
 ```
 
+![Start preview](assets/pen-preview-start.gif)
+
 ## How it works
 
 ```
@@ -45,6 +49,10 @@ Open another design at the same time:
 ```
 /pen-preview landing-page.pen
 ```
+
+You can also preview specific screens instead of all frames:
+
+![Single screen preview](assets/pen-preview-single-screen.gif)
 
 See what's being previewed:
 ```
