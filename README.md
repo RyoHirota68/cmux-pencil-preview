@@ -2,7 +2,7 @@
 
 Hot reload for [Pencil](https://www.pencil.dev/) designs in [cmux](https://github.com/manaflow-ai/cmux) browser.
 
-Every time Claude Code runs `batch_design` on a `.pen` file, the design is automatically exported as PDF and reloaded in the cmux browser pane.
+See your design changes instantly — every time Claude Code runs `batch_design`, the PDF preview is automatically exported and reloaded in the cmux browser pane. No manual export or refresh needed.
 
 [日本語ドキュメント](README.ja.md)
 
@@ -30,8 +30,8 @@ Restart Claude Code after installing to activate the hook. Then start a preview:
 ```
 batch_design → PostToolUse hook fires
   → hook emits additionalContext (JSON)
-  → Claude runs export_nodes (PDF)
-  → Claude runs mv + cmux browser reload
+  → Claude receives instructions via additionalContext
+  → Claude calls export_nodes (PDF) and executes reload via Bash
 ```
 
 ## Usage
