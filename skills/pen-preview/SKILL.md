@@ -1,7 +1,7 @@
 ---
 name: pen-preview
 description: Start, stop, or manage PDF preview sessions for .pen files in cmux browser.
-allowed-tools: Bash
+allowed-tools: Bash, mcp__pencil__export_nodes
 argument-hint: [file.pen | --stop | --list | --clean]
 ---
 
@@ -22,6 +22,14 @@ If no arguments are provided, show help:
 ```bash
 ${CLAUDE_PLUGIN_ROOT}/bin/pen-preview --help
 ```
+
+## After starting a preview
+
+When starting a new preview (not --stop, --list, --clean, --reload), immediately export the current design so the browser shows the latest state instead of a blank page:
+
+1. Read the output of pen-preview to get the Pen file path, Surface ID, and PDF path.
+2. Run export_nodes with the pen file path, outputDir as the session directory (the directory containing preview.pdf), format='pdf', and nodeIds=all top-level screen frames.
+3. Run Bash: `cd '<outputDir>' && mv -f $(ls -t *.pdf | head -1) preview.pdf && cmux browser <surface> reload`
 
 ## Notes
 
